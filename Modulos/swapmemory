@@ -1,0 +1,61 @@
+#!/bin/bash
+fun_swap() {
+_diskText=$(df -h | awk '$NF=="/"{printf "%d/%dGB + (%s)\n", $3,$2,$5}')
+_swap1=$(free -h | grep -i swap | awk {'print $2'})
+swap4=$(free | awk '/Swap/{printf("%.1f%"), $3/($2+.000000001)*100}';)
+    clear
+		echo -e "\E[44;1;37m            GERENCIAR MEMORIA VIRTUAL             \E[0m"
+echo -e "\033[01;34m===================================================================="
+echo -e "\033[1;36mSWAP INSTALADO \033[1;37m ($_swap1) | \033[1;36m ESPAÇO TOTAL \033[1;37m ($_diskText"
+echo -e "\033[01;34m===================================================================="
+                echo -e "\033[1;34m[\033[1;37m01 •\033[1;34m]\033[1;37m > \033[1;33mHABILITAR SWAP OU ALTERAR O VALOR INSTALADO"
+                echo -e "\033[1;34m[\033[1;37m02 •\033[1;34m]\033[1;37m > \033[1;33mDESATIVAR SWAP INSTALADO"
+                echo -e "\033[1;34m[\033[1;37m00 •\033[1;34m]\033[1;37m > \033[1;33mVOLTAR AO MENU AMTERIOR"
+echo -e "\033[01;34m===================================================================="
+                echo -ne "\033[1;37m[ESCOLHA UM NUMERO]\033[1;37m: ----- "; read resposta
+		if [[ "$resposta" = '1' ]]; then
+            clear
+			echo -e "\E[44;1;37m            MEMORIA VIRTUAL              \E[0m"
+			echo ""
+			echo -ne "\033[1;33mQUANTOS GIGAS DESEJA ULTILIZAR \033[1;33m?\033[1;37m: "
+			read gigas
+            [[ -z "$gigas" ]] && {
+					echo ""
+					echo -e "\033[1;31mGIGAS INVALIDO!"
+					sleep 2
+					clear
+					menu
+				}
+            echo ""
+			echo -e "\033[1;33mINICIANDO MEMORIA VIRTUAL: \033[1;37m$gigas GB\033[1;33m"
+			echo ""
+            swapoff -a
+            rm -rf /bin/ram.img > /dev/null 2>&1
+            fallocate -l ${gigas}G /bin/ram.img > /dev/null 2>&1
+            chmod 600 /bin/ram.img > /dev/null 2>&1
+            mkswap /bin/ram.img > /dev/null 2>&1
+            swapon /bin/ram.img > /dev/null 2>&1
+            echo 100 > /proc/sys/vm/swappiness
+            echo '/bin/ram.img none swap sw 0 0' | sudo tee -a /etc/fstab > /dev/null 2>&1
+            echo ""
+			echo -e "\033[1;32mMEMORIA VIRTUAL ATIVADO !\033[1;33m"
+            sleep 4s
+			fun_swap
+        elif [[ "$resposta" = '2' ]]; then
+            clear
+			echo -e "\E[44;1;37m            DESATIVANDO MEMORIA VIRTUAL              \E[0m"
+            swapoff -a
+            rm -rf /bin/ram.img > /dev/null 2>&1
+            echo ""
+			echo -e "\033[1;31mMEMORIA VIRTUAL DESATIVADO !\033[1;33m"
+			sleep 4s
+			fun_swap
+        elif [[ "$resposta" = '0' ]]; then
+			echo ""
+			menu
+		else
+			echo ""
+			fun_swap
+		fi 
+}
+fun_swap

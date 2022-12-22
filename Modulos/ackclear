@@ -1,0 +1,14 @@
+#!/bin/bash
+## 1 - "LIMPEZA DE DNS"
+ip -s -s neigh flush all
+ip neigh flush dev eth0
+## 2 - "CACHE DO SISTEMA"
+echo 3 > /proc/sys/vm/drop_caches
+## 2 - "LIMPAR LOGS"
+echo > /var/log/messages
+echo > /var/log/kern.log
+echo > /var/log/daemon.log
+echo > /var/log/kern.log
+echo > /var/log/dpkg.log
+echo > /var/log/syslog
+echo > /va/log/auth.log

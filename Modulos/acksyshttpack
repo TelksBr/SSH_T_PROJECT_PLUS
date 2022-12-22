@@ -1,0 +1,125 @@
+#!/bin/bash
+####################################<
+### "BY ACKHTTP SERVER MANAGER >> @GODYSKYUP <<" ###
+####################################<
+user=$(whoami)
+if [ "$user" != "root" ]; then
+echo "DEVE SER EXECUTADO COMO ROOT! >> SUDO -I <<"
+fi
+#"1"
+#### "KERNEL" ###
+echo 800000000 > /proc/sys/kernel/sched_migration_cost_ns
+echo 1000000 > /proc/sys/kernel/sched_latency_ns
+echo 32768 > /proc/sys/kernel/sched_nr_migrate
+echo 10000 > /proc/sys/kernel/sched_wakeup_granularity_ns
+echo 16384 > /proc/sys/kernel/threads-max
+echo 16384 > /proc/sys/kernel/pid_max
+echo 8192 > /proc/sys/kernel/pty/max
+echo 1 > /proc/sys/kernel/sched_tunable_scaling
+echo -1 > /proc/sys/kernel/sched_rt_runtime_us
+echo -1 > /proc/sys/kernel/sched_rt_period_us
+echo -1 >/proc/sys/kernel/sched_rr_timeslice_ms
+echo 0 > /proc/sys/kernel/sched_autogroup_enabled
+#"3"
+### "NET.CORE EM GERAL" ###
+echo 33554432 > /proc/sys/net/core/optmem_max
+echo 16384 > /proc/sys/net/core/somaxconn
+echo 32768 > /proc/sys/net/core/netdev_max_backlog
+echo 32768 > /proc/sys/net/core/flow_limit_table_len
+echo 16384 > /proc/sys/net/unix/max_dgram_qlen
+echo 16384 > /proc/sys/net/core/netdev_budget
+echo 4096 > /proc/sys/net/core/rps_sock_flow_entries
+echo 4096 > /sys/class/net/eth0/queues/rx-0/rps_flow_cnt
+echo 1024 > /proc/sys/net/core/dev_weight
+echo 50 > /proc/sys/net/core/busy_read
+echo 50 > /proc/sys/net/core/busy_poll
+#"5"
+### "TEMPO DE CONEXAO TCP" ###
+echo 1800 > /proc/sys/net/ipv4/route/mtu_expires
+echo 1024 > /proc/sys/net/ipv4/tcp_keepalive_probes
+echo 1024 > /proc/sys/net/ipv4/tcp_synack_retries
+echo 300 > /proc/sys/net/ipv4/tcp_keepalive_time
+echo 120 > /proc/sys/net/ipv4/tcp_keepalive_intvl
+echo 100 > /proc/sys/net/ipv4/tcp_syn_retries
+echo 30 > /proc/sys/net/ipv4/tcp_probe_interval
+echo 15 > /proc/sys/net/ipv4/tcp_fin_timeout
+#"7"
+### "TCP" ###
+echo 60000 65535 > /proc/sys/net/ipv4/ip_local_port_range
+echo 32768 > /proc/sys/net/ipv4/tcp_max_syn_backlog
+echo 16384 > /proc/sys/net/ipv4/tcp_notsent_lowat
+echo 16384 > /proc/sys/net/ipv4/tcp_max_tw_buckets
+echo 1460 > /proc/sys/net/ipv4/tcp_base_mss
+echo 8192 > /proc/sys/net/ipv4/tcp_max_orphans
+echo 1024 > /proc/sys/net/ipv4/tcp_min_rtt_wlen
+echo 1024 > /proc/sys/net/ipv4/tcp_reordering
+echo 1024 > /proc/sys/net/ipv4/tcp_min_snd_mss
+echo 1024 > /proc/sys/net/ipv4/tcp_min_tso_segs
+echo 1024 > /proc/sys/net/ipv4/route/min_adv_mss
+echo 1024 > /proc/sys/net/ipv4/tcp_probe_threshold
+echo 1024 > /proc/sys/net/ipv4/tcp_fastopen
+echo 900 > /proc/sys/net/ipv4/tcp_pacing_ca_ratio
+echo 900 > /proc/sys/net/ipv4/tcp_pacing_ss_ratio
+echo 600 > /proc/sys/net/ipv4/tcp_max_reordering
+echo 8 > /proc/sys/net/ipv4/tcp_window_scaling
+echo 8 > /proc/sys/net/ipv4/tcp_tso_win_divisor
+echo 8 > /proc/sys/net/ipv4/tcp_adv_win_scale
+echo 2 > /proc/sys/net/ipv4/tcp_mtu_probing
+echo 2 > /proc/sys/net/ipv4/tcp_orphan_retries
+echo 1 > /proc/sys/net/ipv4/tcp_abort_on_overflow
+echo 1 > /proc/sys/net/ipv4/fwmark_reflect
+echo 1 > /proc/sys/net/ipv4/ip_forward_use_pmtu
+echo 1 > /proc/sys/net/ipv4/ip_forward
+echo 1 > /proc/sys/net/ipv4/tcp_thin_linear_timeouts
+echo 1 > /proc/sys/net/ipv4/tcp_tw_reuse
+echo 1 > /proc/sys/net/ipv4/tcp_no_metrics_save
+echo 1 > /proc/sys/net/ipv4/tcp_early_retrans
+echo 1 > /proc/sys/net/ipv4/fib_multipath_use_neigh
+echo 0 > /proc/sys/net/ipv4/ipfrag_time
+echo 0 > /proc/sys/net/ipv4/xfrm4_gc_thresh
+echo 0 > /proc/sys/net/ipv4/tcp_app_win
+echo 0 > /proc/sys/net/ipv4/tcp_ecn_fallback
+echo 0 > /proc/sys/net/ipv4/tcp_invalid_ratelimit
+echo 0 > /proc/sys/net/ipv4/tcp_timestamps
+echo 0 > /proc/sys/net/ipv4/tcp_moderate_rcvbuf
+echo 0 > /proc/sys/net/ipv4/tcp_ecn
+echo 0 > /proc/sys/net/ipv4/tcp_slow_start_after_idle
+echo 0 > /proc/sys/net/ipv4/tcp_frto
+#"8"
+### "INTERFACE ROUTE" ###0
+echo 32768 > /proc/sys/net/ipv4/route/max_size
+echo 16384 > /proc/sys/net/ipv4/route/gc_thresh
+echo 16384 > /proc/sys/net/ipv4/route/gc_elasticity
+echo 120 > /proc/sys/net/ipv4/route/gc_interval
+echo 15 > /proc/sys/net/ipv4/route/mtu_expires
+echo 15 > /proc/sys/net/ipv4/route/gc_timeout
+echo 1024 > /proc/sys/net/ipv4/route/min_adv_mss
+echo 1024 > /proc/sys/net/ipv4/route/min_pmtu
+### "INTERFACE DEFAULT" ###
+echo 11960320 > /proc/sys/net/ipv4/neigh/default/unres_qlen_bytes
+echo 32768 > /proc/sys/net/ipv4/neigh/default/unres_qlen
+echo 16384 > /proc/sys/net/ipv4/neigh/default/proxy_qlen
+echo 16384 > /proc/sys/net/ipv4/neigh/default/gc_thresh3
+echo 8192 > /proc/sys/net/ipv4/neigh/default/gc_thresh2
+echo 4096 > /proc/sys/net/ipv4/neigh/default/gc_thresh1
+echo 300 > /proc/sys/net/ipv4/neigh/default/base_reachable_time
+echo 300 > /proc/sys/net/ipv4/neigh/default/gc_stale_time
+echo 120 > /proc/sys/net/ipv4/neigh/default/gc_interval
+###"INTERFACE ETH0"###
+echo 16777216 > /proc/sys/net/ipv4/neigh/eth0/proxy_qlen
+echo 16777216 > /proc/sys/net/ipv4/neigh/eth0/unres_qlen_bytes
+echo 86400 > /proc/sys/net/ipv4/neigh/eth0/gc_stale_time
+echo 86400 > /proc/sys/net/ipv4/neigh/eth0/base_reachable_time
+echo 32768 > /proc/sys/net/ipv4/neigh/eth0/unres_qlen
+###"INTERFACE LO"###
+echo 11960320 > /proc/sys/net/ipv4/neigh/lo/unres_qlen_bytes
+echo 32768 > /proc/sys/net/ipv4/neigh/lo/unres_qlen
+echo 16384 > /proc/sys/net/ipv4/neigh/lo/proxy_qlen
+echo 300 > /proc/sys/net/ipv4/neigh/lo/gc_stale_time
+echo 300 > /proc/sys/net/ipv4/neigh/lo/base_reachable_time
+##############################
+### "DESATIVAR IPV6" ###
+echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
+echo 1 > /proc/sys/net/ipv6/conf/default/disable_ipv6
+echo 1 > /proc/sys/net/ipv6/conf/lo/disable_ipv6
+##############################

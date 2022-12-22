@@ -1,0 +1,82 @@
+#!/bin/bash
+    clear
+    echo -e "\033[01;31m\033[1;31m\033[5;34;47m                      FERRAMENTAS                      \033[1;33m \033[0m\033[01;31m║"
+    echo -e "\033[01;31m\033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 01 •\033[1;34m]\033[1;37m ➩  \033[1;33mBLOQUEADOR DE SITE \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 02 •\033[1;34m]\033[1;37m ➩  \033[1;33mBLOQUEIO TORRENT \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 03 •\033[1;34m]\033[1;37m ➩  \033[1;33mANTI ATAQUE DDOS \033[01;31m $sts2\033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 04 •\033[1;34m]\033[1;37m ➩  \033[1;33mBOT REVENDA \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 05 •\033[1;34m]\033[1;37m ➩  \033[1;33mSISTEMA AVANÇADO \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 06 •\033[1;34m]\033[1;37m ➩  \033[1;33mTRAFEGO TOTAL \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 07 •\033[1;34m]\033[1;37m ➩  \033[1;33mBLOQUEAR USUARIO \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 08 •\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR TRÁFEGO DE REDE \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 09 •\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR PROCESSOS ATIVOS \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 10 •\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR SISTEMA COMPLETO \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 11 •\033[1;34m]\033[1;37m ➩  \033[1;33mMONITORAR BANDA POR PROCESSOS \033[0m"
+    echo -e "\033[01;31m\033[1;31m\033[1;34m[\033[1;37m 00 •\033[1;34m]\033[1;37m ➩  \033[1;33mVOLTAR  \033[1;32m<\033[1;33m<\033[1;31m< \033[0m"
+    echo -e "\033[01;31m\033[0m"
+    echo -e "\033[0;36m░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░░★░\033[0m"
+			tput civis
+			echo -ne "\033[1;31m➤ \033[1;32mESCOLHA OPÇÃO DESEJADA\033[1;33m\033[1;31m\033[1;37m : ";
+			read x
+			tput cnorm
+			clear
+			case $x in
+			1 | 01)
+			blocksite
+			;;
+			2 | 02)
+			blockt
+			;;
+			3 | 03)
+			ddos
+			;;
+			4 | 04)
+			initbot
+			;;
+			5 | 05) 
+			multi
+			;;
+			6 | 06)
+			trafegototal
+			;;
+			7 | 07)
+			blockuser 
+			;;
+			8 | 08)
+			clear
+			echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
+			sleep 5s
+			apt install slurm -y && slurm -i eth0
+			;;
+			10 | 10)
+			clear
+			echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
+			sleep 5s
+			apt install htop -y && htop
+			;;
+			11 | 11)
+			clear
+			echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
+			sleep 5s
+			apt install glances -y && glances
+			;;
+			12 | 12)
+			clear
+			echo -e "\033[1;33mPARA SAIR CLICK CTRL + C\033[1;36m"
+			sleep 5s
+			apt install nethogs -y && nethogs
+			;;
+			0 | 00)
+			clear
+			menu
+			;;
+			*)
+			echo -e "\033[1;31mOpcao invalida !\033[0m"
+			sleep 2
+			;;
+			esac
+		done
+	}
+	fun_conexao
+}
