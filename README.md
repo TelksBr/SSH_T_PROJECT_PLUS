@@ -48,7 +48,10 @@ apt install wget -y; bash <(wget -qO- raw.githubusercontent.com/TelksBr/SSH_T_PR
 1. @crazy_vpn - Developer of SSHPlus Manager
 2. @talkera - Contributor
 
-# Canal Do Telegram
+# Canal E Grupos Do Telegram
 ```
 https://t.me/ssh_t_project
+```
+```
+https://t.me/ssh_t_project_grupo
 ```
