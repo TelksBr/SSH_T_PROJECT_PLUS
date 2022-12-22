@@ -99,21 +99,21 @@ echo -e "\n\033[1;36mVERIFICANDO LINK... \033[0m" ; rm $_Ink/listARM >/dev/null 
     sleep 3s
     echo "/bin/menu" >/bin/h && chmod +x /bin/h >/dev/null 2>&1
     rm versao* >/dev/null 2>&1
-    wget https://raw.githubusercontent.com/ScottBrabo/PR0/main/Install/versao >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_PLUS/main/Install/versao >/dev/null 2>&1
     rm v2raymanager >/dev/null 2>&1
-    wget https://raw.githubusercontent.com/ScottBrabo/PR0/main/Modulos/v2raymanager >/dev/null 2>&1
-    wget https://raw.githubusercontent.com/ScottBrabo/PR0/main/Modulos/botteste.sh >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_PLUS/main/Modulos/v2raymanager >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_PLUS/main/Modulos/botteste.sh >/dev/null 2>&1
     chmod 777 v2raymanager >/dev/null 2>&1
     chmod 777 botteste.sh >/dev/null 2>&1
     mkdir $HOME/BOT >/dev/null 2>&1
     cd $HOME/BOT
-    wget https://raw.githubusercontent.com/ScottBrabo/PR0/main/Modulos/ShellBot.sh >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_PLUS/main/Modulos/ShellBot.sh >/dev/null 2>&1
     chmod 777 ShellBot.sh >/dev/null 2>&1
     cd >/dev/null 2>&1
     chmod 777 licence >/dev/null 2>&1
     mkdir /etc/rec >/dev/null 2>&1
     cd /etc/rec
-    wget https://raw.githubusercontent.com/ScottBrabo/PR0/main/Modulos/licence >/dev/null 2>&1
+    wget https://raw.githubusercontent.com/TelksBr/SSH_T_PROJECT_PLUS/main/Modulos/licence >/dev/null 2>&1
     chmod 777 licence >/dev/null 2>&1
     cd >/dev/null 2>&1
     #-----------------------------------------------------------------------------------------------------------------
