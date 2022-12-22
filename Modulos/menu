@@ -228,7 +228,7 @@ swap1=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $2'})")
 swap2=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $4'})")
 swap3=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $3'})")
 clear
-echo -e "            ▀▄▀▄▀▄ 𝓢𝓢𝓗 𝓣 𝓟𝓡𝓞𝓙𝓔𝓒𝓣 𝓟𝓛𝓤𝓢 ▄▀▄▀▄▀" | lolcat
+echo -e "              ▀▄▀▄▀▄ 𝓢𝓢𝓗 𝓣 𝓟𝓡𝓞𝓙𝓔𝓒𝓣 𝓟𝓛𝓤𝓢 ▄▀▄▀▄▀" | lolcat
 echo -e "╔═══════════════════════════•⊱✦⊰•═══════════════════════════╗" | lolcat
 echo -e "\033[0;36m \E[5;34;47m                  ★  SS T PROJECT  ★                \E[0m \033[1;31m"
 echo -e "╚═══════════════════════════•⊱✦⊰•═══════════════════════════╝" | lolcat
@@ -351,7 +351,7 @@ swap1=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $2'})")
 swap2=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $4'})")
 swap3=$(printf '%-5s' "$(free -h | grep -i swap | awk {'print $3'})")
 clear
-echo -e "            ▀▄▀▄▀▄ 𝓢𝓢𝓗 𝓣 𝓟𝓡𝓞𝓙𝓔𝓒𝓣 𝓟𝓛𝓤𝓢 ▄▀▄▀▄▀" | lolcat
+echo -e "              ▀▄▀▄▀▄ 𝓢𝓢𝓗 𝓣 𝓟𝓡𝓞𝓙𝓔𝓒𝓣 𝓟𝓛𝓤𝓢 ▄▀▄▀▄▀" | lolcat
 echo -e "╔═══════════════════════════•⊱✦⊰•═══════════════════════════╗" | lolcat
 echo -e "\033[0;36m \E[5;34;47m                  ★  SSH T PROJECT  ★                \E[0m \033[1;31m"
 echo -e "╚═══════════════════════════•⊱✦⊰•═══════════════════════════╝" | lolcat
