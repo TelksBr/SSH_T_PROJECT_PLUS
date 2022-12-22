@@ -54,7 +54,5 @@ https://t.me/ssh_t_project
 ```
 
 <p>
- <a href="https://github.com/TelksBr/">
-      <img alt="mainteined" src="ttps://github-readme-stats.vercel.app/api/top-langs/?username={TelksBr}&theme=blue-green" />
-    </a>
+ <a href="ttps://github-readme-stats.vercel.app/api/top-langs/?username={TelksBr}&theme=blue-green"></a>
  </p>
