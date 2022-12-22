@@ -25,7 +25,7 @@
 # Características e Funções
 
 - Conexão SSH
-- Dropbear, SSLTunnel4, conexões OpenVPN, etc.
+- Dropbear, SSLTunne, OpenVPN, TrojanGo, X-UI etc.
 - Excluir e criar usuários
 - Monitor de conexão online
 - Detalhes do seu sistema e usuários
