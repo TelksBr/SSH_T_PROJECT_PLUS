@@ -50,9 +50,5 @@ apt install wget -y; bash <(wget -qO- raw.githubusercontent.com/TelksBr/SSH_T_PR
 
 # Canal Do Telegram
 ```
-https://t.me/ssh_t_project
 ```
-
-<p>
- <a href="ttps://github-readme-stats.vercel.app/api/top-langs/?username={TelksBr}&theme=blue-green"></a>
- </p>
+<p> <img src="https://badgen.net/badge/icon/telegram?icon=telegram&label"> https://t.me/ssh_t_project </p>
