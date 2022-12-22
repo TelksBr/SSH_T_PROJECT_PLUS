@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-#--------@Scottssh-----------#
+#--------@TALKERA-----------#
 source ShellBot2.sh
 ShellBot.init --token "2104982015:AAF3cchdGHRKvKCjG_z_Xd9c7Ip9lof6KCE" --monitor --flush
 ShellBot.username

@@ -75,7 +75,7 @@ otimize_python() {
     #SETAR PYTHON3
     update-alternatives --set python3 /usr/bin/python3.6
 }
-figlet "SCOTT-PRO" | lolcat
+figlet "SSH T PLUS" | lolcat
 echo "SCRIPT EM DESENVOLVIMENTO !!"
 echo -e "\033[01;31m━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━═━━═━═━═━═━═━━═━═━═━═━━═━═━═━═━═━═━═━━\033[0m"
 echo ""
@@ -184,6 +184,17 @@ echo -e "\n\033[1;36mVERIFICANDO LINK... \033[0m" ; rm $_Ink/listARM >/dev/null 
     ufw allow 3128/tcp
     ufw allow 8799/tcp
     ufw allow 8080/tcp
+    ufw allow 8443/tcp
+    ufw allow 8880/tcp
+    ufw allow 8888/tcp
+    ufw allow 7100/udp
+    ufw allow 7200/udp
+    ufw allow 7300/udp
+    ufw allow 7400/udp
+    ufw allow 7500/udp
+    ufw allow 7600/udp
+    ufw allow 1080/tcp
+    ufw allow 1000/tcp
     clear
     echo ""
     echo -e "              \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mFINALIZANDO \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
@@ -223,18 +234,18 @@ chmod 777 checkuser.py > /dev/null 2>&1
     echo "clear" >>/root/.bashrc
     echo 'DATE=$(date +"%d-%m-%y")' >>/root/.bashrc
     echo 'TIME=$(date +"%T")' >>/root/.bashrc
-    echo 'figlet -k SCOTT-PRO | lolcat' >>/root/.bashrc
+    echo 'figlet -k SSH T PLUS | lolcat' >>/root/.bashrc
     echo 'echo -e " NOME DO SERVIDOR : $HOSTNAME"' >>/root/.bashrc
     echo 'echo -e " SERVIDOR LIGADO À : $(uptime -p)"' >>/root/.bashrc
     echo 'echo -e " DATA : $DATE"' >>/root/.bashrc
     echo 'echo -e " HORA : $TIME"' >>/root/.bashrc
-    echo 'echo -e "@scottssh"' >>.bashrc
+    echo 'echo -e "@TALKERA"' >>.bashrc
     echo 'echo -e "\033[1;31m DIGITE ( menu ) PARA ENTRAR\033[0m."' >>/root/.bashrc
     echo 'echo -e ""' >>/root/.bashrc
     date=$(date '+%Y-%m-%d <> %H:%M:%S')
     echo -e "\033[1;37m $system                          $date"
-    figlet "SCOTT-PR0" | lolcat
+    figlet "SSH T PLUS" | lolcat
     echo -e "\033[01;31m║\033[1;31m\033[5;34;47m                INSTALACAO CONCLUIDA               \033[1;33m \033[0m\033[01;31m║"
     echo -e "\033[01;31m║\033[1;33mPARA INICIAR DIGITE: \033[1;32mmenu\033[0m"
-    echo -e "\033[01;31m║\033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@scottssh\033[0m"
+    echo -e "\033[01;31m║\033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@ss_t_project\033[0m"
     rm $HOME/Plus && cat /dev/null > ~/.bash_history && history -c

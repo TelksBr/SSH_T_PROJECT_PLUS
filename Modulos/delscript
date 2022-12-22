@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-echo -e "\033[1;32mDESEJA DESISTALAR O SSH-PLUS ?\033[1;33m"
+echo -e "\033[1;32mDESEJA DESISTALAR O SSH PROJEC T PLUS ?\033[1;33m"
 read -p "Deseja Remover? [s/n] " resp
 if [[ "$resp" = s || "$resp" = S ]];then
     apt-get purge screen -y > /dev/null 2>&1
@@ -20,7 +20,7 @@ if [[ "$resp" = s || "$resp" = S ]];then
     rm -rf /root/.criar* /root/backup.vps* /root/SSHPlus* /root/BOT* /root/Plus* /root/.bashrc* /root/usuarios.db* /root/.rmuid* /root/.rmuser* /root/.uid* /root/ackclear* /root/acksyshttpack* /root/addhost* /root/ajuda* /root/alterarlimite* /root/alterarsenha* /root/antCrashARM.sh* /root/apache2menu* /root/attscript* /root/Autobackup* /root/backup_mail.sh* /root/badpro* /root/badvpn* /root/badvpn-udpgw* /root/banner* /root/bashtop* /root/ddos* /root/blocksite* /root/blockt* /root/blockuser* /root/bot* /root/botssh* /root/cabecalho* /root/celular.sh* /root/conexao* /root/criarteste* /root/criarusuario* /root/delhost* /root/delscript* /root/detalhes* /root/dns-netflix.sh* /root/dns-server* /root/droplimiter* /root/expcleaner* /root/ban.sh* /root/fail2ban* /root/instcheck.sh* /root/fr* /root/haveged* /root/infousers* /root/initcheck* /root/initbot* /root/inst-botteste* /root/instsqd* /root/limiter* /root/menu* /root/mudardata* /root/mtuning* /root/multi* /root/onlineapp* /root/open.py* /root/otimizar* /root/painelv2ray* /root/prissh* /root/prnet.sh* /root/proxy.py* /root/reiniciarservicos* /root/reiniciarsistema* /root/remove-slow* /root/remover* /root/restartdns* /root/senharoot* /root/ShellBot.sh* /root/slow_dns* /root/slowdns* /root/slowdns-drop* /root/slowdns-info* /root/slowdns-socks* /root/slowdns-ssh* /root/slowdns-ssl* /root/speedtest* /root/sshmonitor* /root/startdns* /root/stopdns* /root/swapmemory* /root/trafegototal* /root/trojan-go* /root/tuning* /root/tweaker* /root/uexpired* /root/userbackup* /root/verifatt* /root/verifbot* /root/v2raymanager* /root/webmin.sh* /root/websocket.sh* /root/versao* /root/wsproxy.py* > /root/null 2>&1
     rm -rf /etc/SSHPlus > /dev/null 2>&1
     clear
-    echo -e "\033[1;36mObrigado por utilizar o SCOTT PLUS @scottssh\033[1;33m"
+    echo -e "\033[1;36mObrigado por utilizar o SSH T PROJECT PLUS @TALKERA\033[1;33m"
     sleep 2
     echo -e "\033[1;31m SCRIPT REMOVIDO COM SUCESSO ✔️\033[0m"
     echo ""
