@@ -486,7 +486,7 @@ case "$x" in
    exit;
    ;;
    v)
-   bash <(curl -Ls https://raw.githubusercontent.com/X-UI-Unofficial/release/main/install.sh) 221120_v5
+   bash <(curl -Ls https://raw.githubusercontent.com/X-UI-Unofficial/release/main/install.sh) 230123_v1
    ;;
    *)
    echo -e "\n\033[1;31mOpcao invalida !\033[0m"
